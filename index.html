@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- 
+  HTML 文档声明，告诉浏览器使用哪个版本的 HTML 规范
+  DOCTYPE = Document Type（文档类型）
+-->
+<html lang="zh-CN">
+<!-- 
+  html 标签是网页的根元素
+  lang 属性指定页面语言，有助于搜索引擎和辅助工具理解内容
+-->
+<head>
+    <!-- meta 标签提供关于网页的元数据（不显示在页面上） -->
+    <meta charset="UTF-8">
+    <!-- 字符编码设置为 UTF-8，支持中文等特殊字符 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport 设置让网页在移动设备上正确显示 -->
+    
+    <title>我的个人主页 - 前端学习第一步</title>
+    <!-- title 设置浏览器标签页上显示的标题 -->
+    
+    <!-- 引入外部 CSS 文件，控制页面样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- body 标签内的内容会显示在浏览器窗口中 -->
+    
+    <!-- 导航栏区域 -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🚀 我的主页</h1>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页横幅区域 -->
+    <header id="home" class="hero">
+        <div class="container">
+            <h2 class="hero-title">你好，我是<span id="name-text"></span>👋</h2>
+            <p class="hero-subtitle">欢迎来到我的前端学习之旅！</p>
+            <button id="greet-btn" class="btn-primary">点击问候</button>
+        </div>
+    </header>
+
+    <!-- 关于我区域 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>📖 我是谁</h3>
+                    <p>一个正在学习前端开发的初学者，对创造美丽的网页充满热情！</p>
+                </div>
+                <div class="about-card">
+                    <h3>🎯 我的目标</h3>
+                    <p>掌握现代前端技术，能够独立开发完整的 Web 应用。</p>
+                </div>
+                <div class="about-card">
+                    <h3>💡 兴趣爱好</h3>
+                    <p>喜欢编程、设计和探索新技术，享受创造的过程。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示区域 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">学习进度</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 60%">60%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%">40%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 30%">30%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 计数展示区域 -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h3 id="learn-days">0</h3>
+                <p>学习天数</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="code-lines">0</h3>
+                <p>代码行数</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="projects-done">0</h3>
+                <p>完成项目</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="username" placeholder="你的名字" required>
+                <input type="email" id="email" placeholder="你的邮箱" required>
+                <textarea id="message" placeholder="想说的话..." rows="5" required></textarea>
+                <button type="submit" class="btn-primary">发送消息</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 我的个人主页 | 前端学习从这一步开始 ❤️</p>
+            <p id="current-time"></p>
+        </div>
+    </footer>
+
+    <!-- 引入 JavaScript 文件，添加交互功能 -->
+    <script src="script.js"></script>
+</body>
+</html>
